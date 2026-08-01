@@ -12,7 +12,7 @@ table{border-collapse:collapse;width:100%;margin:12px 0;font-size:14px}
 td{border:1px solid #CDD0DF;padding:8px 10px;vertical-align:top}
 ul{padding-left:20px} .meta{color:#8E97AE;font-size:13px;margin-bottom:24px}
 </style></head><body>
-<div class="meta">Nitevia · Effective 2026-06-25 · Last updated 2026-06-25</div>
+<div class="meta">Nitevia · Effective 2026-06-25 · Last updated 2026-08-01</div>
 <hr>
 <h2>The short version</h2>
 <p>Nitevia listens while you sleep and figures out what happened — snoring, coughing, restlessness. Every bit of that analysis runs on your device. We have no servers that store your recordings. We don't know who you are. We don't need to.</p>
@@ -24,7 +24,7 @@ ul{padding-left:20px} .meta{color:#8E97AE;font-size:13px;margin-bottom:24px}
 <tr><td>Sound event classifications (label, timestamp, confidence)</td><td>App-private storage on your device</td><td>No</td></tr>
 <tr><td>Session metadata (duration, event count, battery usage)</td><td>App-private storage on your device</td><td>No</td></tr>
 <tr><td>Your preferences (retention setting, display options)</td><td>App-private storage on your device</td><td>No</td></tr>
-</table><p><strong>Crash diagnostics (opt-in only, OFF by default):</strong> if — and only if — you turn on crash reporting, limited technical crash data may leave your device as described in §5. It is off unless you explicitly enable it.</p>
+</table><p><strong>Crash diagnostics (opt-in only, OFF by default):</strong> if — and only if — you turn on crash reporting, limited technical crash data may leave your device as described in §7. It is off unless you explicitly enable it.</p>
 <hr>
 <h2>2. Data We Do NOT Collect</h2>
 <ul><li>Your name, email address, or any identifying information</li>
@@ -41,14 +41,25 @@ ul{padding-left:20px} .meta{color:#8E97AE;font-size:13px;margin-bottom:24px}
 <li><strong>Uninstalling deletes everything.</strong> No data persists after you remove the app.</li>
 <li><strong>OS backups:</strong> if you have iCloud (iOS) or Google One (Android) backup enabled for apps, your device OS may include Nitevia's data in device-level backups. That backup is governed by Apple's or Google's privacy policy, not ours. You can exclude Nitevia from backups in your device settings.</li>
 </ul><hr>
-<h2>4. Data Retention</h2>
+<h2>4. Sleep Factors You Record</h2>
+<p>Before a night you can tag what might have affected your sleep — caffeine, exercise, stress, and so on,
+chosen from a fixed list in the app. Factor selections are stored in app-private storage on your device.
+They are never uploaded. They are used only to show you patterns across your own nights.</p>
+<p><strong>Deleting them.</strong> Deleting a night removes that night's factor selections.</p>
+<hr>
+<h2>5. The Two Consents</h2>
+<ul>
+<li><strong>Microphone.</strong> Asked by the system before any recording. Required for the app to work.</li>
+<li><strong>Crash reports.</strong> Off unless you turn it on. Separate from the microphone permission and never bundled with it.</li>
+</ul><hr>
+<h2>6. Data Retention</h2>
 <p>You control how many nights Nitevia keeps. Choose in Settings → Saved records:</p>
 <ul><li><strong>Just the last night</strong> — only your most recent night is kept</li>
 <li><strong>5 nights</strong> · <strong>10 nights</strong> · <strong>20 nights</strong> — older nights are removed to free up space; your most recent nights are kept</li>
 <li><strong>Unlimited</strong> — nights stay until you delete them manually or uninstall the app</li>
 </ul><p>You can delete individual sessions or wipe all data at any time from Settings → Data Management.</p>
 <hr>
-<h2>5. Third-Party Services</h2>
+<h2>7. Third-Party Services</h2>
 <p><strong>Crash diagnostics — opt-in, OFF by default</strong></p>
 <p>To help us fix bugs, Nitevia includes optional crash reporting. It is <strong>off by default</strong> and only sends anything if <strong>you turn it on</strong>. When enabled:</p>
 <ul><li><strong>What it collects:</strong> a stack trace (a technical log of what code was running at the moment of a crash), your device model, OS version, and app version.</li>
@@ -58,7 +69,13 @@ ul{padding-left:20px} .meta{color:#8E97AE;font-size:13px;margin-bottom:24px}
 </ul><p>You can turn crash reporting on or off at any time in Settings. When it is off, no data is sent.</p>
 <p><strong>No other third-party services are in use.</strong></p>
 <hr>
-<h2>6. Your Rights</h2>
+<h2>8. Your Rights</h2>
+<p><strong>Delete all data</strong> removes your recordings, clips, reports and each night's factor selections.
+If a recording is in progress it will refuse rather than delete, and tell you so. If any file cannot be
+removed, it says so plainly rather than reporting success.</p>
+<p><strong>Sharing a clip</strong> is the only way audio leaves your device, and only when you choose to share it.
+The shared copy is stripped of recording metadata first.</p>
+
 <p><strong>Everyone:</strong></p>
 <p>You can delete all your data at any time from within the app (Settings → Data Management). Because data lives only on your device, in-app deletion is complete deletion — nothing else to request.</p>
 <p><strong>European Economic Area and United Kingdom (GDPR / UK GDPR):</strong></p>
@@ -67,17 +84,17 @@ ul{padding-left:20px} .meta{color:#8E97AE;font-size:13px;margin-bottom:24px}
 <li>Request correction or deletion</li>
 <li>Object to processing</li>
 <li>Lodge a complaint with your national data protection authority</li>
-</ul><p>Contact us (§9) to exercise these rights. Our legal basis for crash data processing would be legitimate interest in maintaining app stability, balanced against your privacy rights given the minimal, non-content data involved.</p>
+</ul><p>Contact us (§11) to exercise these rights. Our legal basis for crash data processing would be legitimate interest in maintaining app stability, balanced against your privacy rights given the minimal, non-content data involved.</p>
 <p><strong>California (CCPA):</strong></p>
 <p>We do not sell your personal information. If crash diagnostics are enabled, limited device diagnostic data may be shared with a service provider solely for crash analysis purposes — this qualifies as a "service provider" relationship, not a sale.</p>
 <hr>
-<h2>7. Children</h2>
+<h2>9. Children</h2>
 <p>Nitevia is not directed at children under 13 (United States) or under 16 (European Union). We do not knowingly collect personal information from children. The app requires no account and collects no identifying information on-device. If you are a parent or guardian and believe your child has used this app with crash diagnostics enabled, contact us to request any associated data deletion.</p>
 <hr>
-<h2>8. Changes to This Policy</h2>
+<h2>10. Changes to This Policy</h2>
 <p>If we make material changes, we will update the "Last updated" date above. For significant changes — particularly if we add services that send data off-device — we will notify you within the app before the change takes effect.</p>
 <hr>
-<h2>9. Contact</h2>
+<h2>11. Contact</h2>
 <p>Questions about this policy or your data:</p>
 <p><strong>Email:</strong> yasin.kbas12@gmail.com</p>
 <p><strong>App:</strong> Nitevia</p>
