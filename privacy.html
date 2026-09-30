@@ -30,7 +30,7 @@ hr{border-top-color:#232A36} td{border-color:#232A36} .meta{color:#97A0B1}
 <tr><td>Session metadata (duration, event count, battery usage)</td><td>App-private storage on your device</td><td>No</td></tr>
 <tr><td>Your preferences (retention setting, display options)</td><td>App-private storage on your device</td><td>No</td></tr>
 <tr><td>Your answers to the Sleep apnea risk check (§5)</td><td>App-private storage on your device</td><td>No</td></tr>
-<tr><td>Nights you record on an Apple Watch: short sound clips and a battery log (§6)</td><td>On your Apple Watch</td><td>No</td></tr>
+<tr><td>Nights you record on an Apple Watch: short sound clips and a battery log (§6)</td><td>On your Apple Watch, then moved to your iPhone</td><td>No</td></tr>
 </table><p><strong>Crash diagnostics (opt-in only, OFF by default):</strong> if — and only if — you turn on crash reporting, limited technical crash data may leave your device as described in §9. It is off unless you explicitly enable it.</p>
 <hr>
 <h2>2. Data We Do NOT Collect</h2>
@@ -60,9 +60,10 @@ They are never uploaded. They are used only to show you patterns across your own
 <p><strong>Deleting them.</strong> "Clear" in the check removes your answers, and so does Delete all data (§10). Taking it again replaces them.</p>
 <hr>
 <h2>6. Recording on an Apple Watch</h2>
-<p>If you record a night on the Nitevia Apple Watch app, the watch saves short clips around sounds and a battery log in the watch app's private storage. They stay on the watch and are never uploaded.</p>
-<p>So that your iPhone can show "Recording on your Apple Watch", the watch sends your iPhone a status: whether it is recording, and since when. That goes directly between your own devices through Apple's watch connection. It carries no audio and no sound data, and it never reaches us.</p>
-<p>Removing the watch app from your watch deletes what it saved.</p>
+<p>If you record a night on the Nitevia Apple Watch app, the watch saves short clips around sounds and a battery log in the watch app's private storage.</p>
+<p>When you stop, the watch sends that night's clips and battery log to your iPhone, directly between your own devices through Apple's watch connection. Your iPhone analyses them on the device, like a night recorded on the phone, and keeps them in its app-private storage. Once your iPhone has the whole night, the watch deletes its copies. Nothing is uploaded and nothing reaches us.</p>
+<p>While a night is recording, the watch also tells your iPhone whether it is recording and since when, so the iPhone can show "Recording on your Apple Watch". That status carries no audio.</p>
+<p>A night recorded on the watch is then deleted like any other night (§10). A night the watch has not sent yet is deleted by removing the watch app.</p>
 <hr>
 <h2>7. The Two Consents</h2>
 <ul>
@@ -100,7 +101,7 @@ removed, it says so plainly rather than reporting success.</p>
 The shared copy is stripped of recording metadata first.</p>
 
 <p><strong>Everyone:</strong></p>
-<p>You can delete all your data at any time from within the app (Settings → Data Management). Delete all data removes your nights, clips, reports, factor selections, the custom tags you typed, starred sounds, your Sleep apnea risk check answers and your answers from the first-run questions. Your settings (such as language and reminder time) are kept. Nights recorded on an Apple Watch are deleted by removing the watch app (§6). Because your data lives only on your devices, deleting it there is complete deletion — nothing else to request.</p>
+<p>You can delete all your data at any time from within the app (Settings → Data Management). Delete all data removes your nights, clips, reports, factor selections, the custom tags you typed, starred sounds, your Sleep apnea risk check answers and your answers from the first-run questions. Your settings (such as language and reminder time) are kept. Nights recorded on an Apple Watch are deleted with it once they are on your iPhone; a night the watch has not sent yet is deleted by removing the watch app (§6). Because your data lives only on your devices, deleting it there is complete deletion — nothing else to request.</p>
 <p><strong>European Economic Area and United Kingdom (GDPR / UK GDPR):</strong></p>
 <p>If crash diagnostics are enabled, a limited amount of data (device identifiers in crash reports) may qualify as personal data under the GDPR. In that case, you have rights to:</p>
 <ul><li>Access the data held about you</li>
