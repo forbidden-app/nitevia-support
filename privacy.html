@@ -17,10 +17,11 @@ p,li{color:#C6CCD8} strong{color:#EEF0EB} a{color:#96D2CA}
 hr{border-top-color:#232A36} td{border-color:#232A36} .meta{color:#97A0B1}
 }
 </style></head><body>
-<div class="meta">Nitevia · Effective 2026-06-25 · Last updated 2026-09-30</div>
+<div class="meta">Nitevia · Effective 2026-06-25 · Last updated 2026-10-07</div>
 <hr>
 <h2>The short version</h2>
 <p>Nitevia listens while you sleep and figures out what happened — snoring, coughing, restlessness. Every bit of that analysis runs on your device. We have no servers that store your recordings. We don't know who you are. We don't need to.</p>
+<p>Two things can leave your device, and neither is about your sleep: anonymous usage data (which screens of the app are opened; you can turn it off in Settings) and, only if you turn them on, crash reports. Both are described in §9.</p>
 <hr>
 <h2>1. Data We Collect</h2>
 <p>Nitevia collects only what's needed to analyze your sleep:</p>
@@ -32,6 +33,7 @@ hr{border-top-color:#232A36} td{border-color:#232A36} .meta{color:#97A0B1}
 <tr><td>Your answers to the Sleep apnea risk check (§5)</td><td>App-private storage on your device</td><td>No</td></tr>
 <tr><td>Nights you record on an Apple Watch: short sound clips and a battery log (§6)</td><td>On your Apple Watch, then moved to your iPhone</td><td>No</td></tr>
 </table><p><strong>Crash diagnostics (opt-in only, OFF by default):</strong> if — and only if — you turn on crash reporting, limited technical crash data may leave your device as described in §9. It is off unless you explicitly enable it.</p>
+<p><strong>Anonymous usage data (ON by default, you can turn it off):</strong> which screens are opened and which steps are completed, as described in §9. It never includes anything in the table above.</p>
 <hr>
 <h2>2. Data We Do NOT Collect</h2>
 <ul><li>Your name, email address, or any identifying information</li>
@@ -40,7 +42,8 @@ hr{border-top-color:#232A36} td{border-color:#232A36} .meta{color:#97A0B1}
 <li>Health records or medical data from other apps or services (Nitevia does not read Apple Health)</li>
 <li>Contacts, photos, or any other app's data</li>
 <li>Advertising identifiers</li>
-<li>Usage analytics or behavioral tracking</li>
+<li>Anything about your nights in usage data: no audio, no sounds, no scores, no sleep or recording times, no factors, nothing you typed</li>
+<li>Tracking across other apps or websites, or any advertising profile</li>
 </ul><hr>
 <h2>3. How We Store Your Data</h2>
 <p>All Nitevia data lives in your device's private app sandbox (iOS) or app-private storage (Android):</p>
@@ -66,10 +69,11 @@ They are never uploaded. They are used only to show you patterns across your own
 <p>So you can browse your nights on the watch, your iPhone sends it a short list of your nights: their dates, lengths, scores and the sounds in them (no audio). When you tap a sound on the watch, your iPhone sends that one clip to play; the watch keeps it only while that night is still on your iPhone.</p>
 <p>A night recorded on the watch is then deleted like any other night (§10). A night the watch has not sent yet is deleted by removing the watch app.</p>
 <hr>
-<h2>7. The Two Consents</h2>
+<h2>7. Your Choices</h2>
 <ul>
 <li><strong>Microphone.</strong> Asked by the system before any recording. Required for the app to work.</li>
 <li><strong>Crash reports.</strong> Off unless you turn it on. Separate from the microphone permission and never bundled with it.</li>
+<li><strong>Usage data.</strong> On unless you turn it off, in Settings → Share usage data. Independent of crash reports.</li>
 </ul><hr>
 <h2>8. Data Retention</h2>
 <p>You control how many nights Nitevia keeps. Choose in Settings → Saved records:</p>
@@ -77,6 +81,7 @@ They are never uploaded. They are used only to show you patterns across your own
 <li><strong>5 nights</strong> · <strong>10 nights</strong> · <strong>20 nights</strong> — older nights are removed to free up space; your most recent nights are kept</li>
 <li><strong>Unlimited</strong> — nights stay until you delete them manually or uninstall the app</li>
 </ul><p>You can delete individual sessions or wipe all data at any time from Settings → Data Management.</p>
+<p>Anonymous usage data (§9) is kept by Google Analytics for 14 months from your last activity, then deleted.</p>
 <hr>
 <h2>9. Third-Party Services</h2>
 <p><strong>Crash diagnostics — opt-in, OFF by default</strong></p>
@@ -86,6 +91,14 @@ They are never uploaded. They are used only to show you patterns across your own
 <li><strong>Who processes it:</strong> Firebase Crashlytics, operated by Google LLC.</li>
 <li><strong>Purpose:</strong> diagnosing and fixing crashes. Never used for advertising, profiling, or tracking.</li>
 </ul><p>You can turn crash reporting on or off at any time in Settings. When it is off, no data is sent.</p>
+<p><strong>Usage analytics — ON by default, you can turn it off</strong></p>
+<p>To understand which parts of the app are used and where people get stuck, Nitevia sends anonymous usage data:</p>
+<ul><li><strong>What it collects:</strong> which screens are opened; which pages of the first-run setup are completed; whether the microphone question and the reminder offer were answered yes or no; whether the plans page was shown or closed and which plan was bought or restored; that a recording was started or stopped (not its length, and nothing it contains).</li>
+<li><strong>What the tool adds by itself:</strong> the app's version, your device model, OS version, language and country (worked out from your IP address, which is not stored), when the app was first opened, session counts and how long the app was open, and a random app-instance identifier that is created at install and ends when you delete the app.</li>
+<li><strong>What it does NOT collect:</strong> audio recordings, sounds, your Night Score, sleep or recording times and lengths, the factors you tag, your Sleep apnea risk check answers, or anything you type. No advertising identifier, and no tracking across other apps or websites.</li>
+<li><strong>Who processes it:</strong> Google Analytics for Firebase, operated by Google LLC.</li>
+<li><strong>Purpose:</strong> improving the app. Never used for advertising or profiling.</li>
+</ul><p>You can turn it off at any time in Settings → Share usage data. Turning it off also deletes anything collected that had not been sent yet, and nothing more is sent.</p>
 <p><strong>Update check</strong></p>
 <p>When the app starts, it asks our server (<code>nitevia.iocar.app</code>) whether a newer version of Nitevia is required. The request contains nothing about you or your sleep: no account, no identifier, no recordings. Like any web request, the server sees your IP address and the app's standard user agent (the app's name and build number, and your iOS version). These appear in the server's request logs, which are kept for up to 30 days and used only to answer the check and keep the server running. They are not used for tracking or advertising.</p>
 <p><strong>Subscriptions</strong></p>
@@ -104,17 +117,17 @@ The shared copy is stripped of recording metadata first.</p>
 <p><strong>Everyone:</strong></p>
 <p>You can delete all your data at any time from within the app (Settings → Data Management). Delete all data removes your nights, clips, reports, factor selections, the custom tags you typed, starred sounds, your Sleep apnea risk check answers and your answers from the first-run questions. Your settings (such as language and reminder time) are kept. Nights recorded on an Apple Watch are deleted with it once they are on your iPhone; a night the watch has not sent yet is deleted by removing the watch app (§6). Because your data lives only on your devices, deleting it there is complete deletion — nothing else to request.</p>
 <p><strong>European Economic Area and United Kingdom (GDPR / UK GDPR):</strong></p>
-<p>If crash diagnostics are enabled, a limited amount of data (device identifiers in crash reports) may qualify as personal data under the GDPR. In that case, you have rights to:</p>
+<p>The app-instance identifier in usage data and, if crash diagnostics are enabled, device identifiers in crash reports may qualify as personal data under the GDPR. For that data you have rights to:</p>
 <ul><li>Access the data held about you</li>
 <li>Request correction or deletion</li>
 <li>Object to processing</li>
 <li>Lodge a complaint with your national data protection authority</li>
-</ul><p>Contact us (§13) to exercise these rights. Our legal basis for crash data processing would be legitimate interest in maintaining app stability, balanced against your privacy rights given the minimal, non-content data involved.</p>
+</ul><p>Contact us (§13) to exercise these rights. You can object to usage data at any time by turning it off in Settings. Our legal basis for usage data and crash data is legitimate interest in improving the app and keeping it stable, balanced against your privacy rights given the minimal, non-content data involved.</p>
 <p><strong>California (CCPA):</strong></p>
-<p>We do not sell your personal information. If crash diagnostics are enabled, limited device diagnostic data may be shared with a service provider solely for crash analysis purposes — this qualifies as a "service provider" relationship, not a sale.</p>
+<p>We do not sell your personal information. Anonymous usage data and, if crash diagnostics are enabled, limited device diagnostic data are shared with a service provider solely for app analytics and crash analysis — this qualifies as a "service provider" relationship, not a sale.</p>
 <hr>
 <h2>11. Children</h2>
-<p>Nitevia is not directed at children under 13 (United States) or under 16 (European Union). We do not knowingly collect personal information from children. The app requires no account and collects no identifying information on-device. If you are a parent or guardian and believe your child has used this app with crash diagnostics enabled, contact us to request any associated data deletion.</p>
+<p>Nitevia is not directed at children under 13 (United States) or under 16 (European Union). We do not knowingly collect personal information from children. The app requires no account and collects no identifying information on-device. If you are a parent or guardian and believe your child has used this app, contact us to request any associated data deletion.</p>
 <hr>
 <h2>12. Changes to This Policy</h2>
 <p>If we make material changes, we will update the "Last updated" date above. For significant changes — particularly if we add services that send data off-device — we will notify you within the app before the change takes effect.</p>
