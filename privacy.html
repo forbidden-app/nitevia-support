@@ -17,7 +17,7 @@ p,li{color:#C6CCD8} strong{color:#EEF0EB} a{color:#96D2CA}
 hr{border-top-color:#232A36} td{border-color:#232A36} .meta{color:#97A0B1}
 }
 </style></head><body>
-<div class="meta">Nitevia · Effective 2026-06-25 · Last updated 2026-10-08</div>
+<div class="meta">Nitevia · Effective 2026-06-25 · Last updated 2026-10-20</div>
 <hr>
 <h2>The short version</h2>
 <p>Nitevia listens while you sleep and figures out what happened — snoring, coughing, restlessness. Every bit of that analysis runs on your device. We have no servers that store your recordings. We don't know who you are. We don't need to.</p>
@@ -38,7 +38,7 @@ hr{border-top-color:#232A36} td{border-color:#232A36} .meta{color:#97A0B1}
 <h2>2. Data We Do NOT Collect</h2>
 <ul><li>Your name, email address, or any identifying information</li>
 <li>A user account (none required, none created)</li>
-<li>Location data</li>
+<li>Your precise location</li>
 <li>Health records or medical data from other apps or services (Nitevia does not read Apple Health)</li>
 <li>Contacts, photos, or any other app's data</li>
 <li>Advertising identifiers</li>
@@ -94,11 +94,13 @@ They are never uploaded. They are used only to show you patterns across your own
 <p><strong>Usage analytics — ON by default, you can turn it off</strong></p>
 <p>To understand which parts of the app are used and where people get stuck, Nitevia sends anonymous usage data:</p>
 <ul><li><strong>What it collects:</strong> which screens are opened; which pages of the first-run setup you move through, forward or back (never your answers on them); whether the microphone question and the reminder offer were answered yes or no (never the reminder's time); whether the plans page was shown or closed, which kind of plan (monthly, annual or lifetime) a purchase was started or completed for, and that a restore succeeded (no price and no payment details); that a recording was started, and that it ended and whether you ended it or something else did (not its length, and nothing it contains).</li>
-<li><strong>What the tool adds by itself:</strong> the app's version, your device model, OS version, language and approximate location (the country and city, worked out from your IP address, which is not stored; the app never asks for or uses your device's location), when the app was first opened, session counts and how long the app was open, that the app or the OS was updated, that the app was removed, and a random app-instance identifier that is created at install and ends when you delete the app.</li>
+<li><strong>What the tool adds by itself:</strong> the app's version, your device model, OS version, language and approximate location (the country and city, worked out from your IP address, which is not stored), when the app was first opened, session counts and how long the app was open, that the app or the OS was updated, that the app was removed, and a random app-instance identifier that is created at install and ends when you delete the app.</li>
 <li><strong>What it does NOT collect:</strong> audio recordings, sounds, your Night Score, sleep or recording times and lengths, the factors you tag, your Sleep apnea risk check answers, or anything you type. No advertising identifier, and no tracking across other apps or websites.</li>
 <li><strong>Who processes it:</strong> Google Analytics for Firebase, operated by Google LLC.</li>
 <li><strong>Purpose:</strong> improving the app. Never used for advertising or profiling.</li>
 </ul><p>You can turn it off at any time in Settings → Share usage data. Turning it off also deletes anything collected that had not been sent yet, and no usage data is sent after that.</p>
+<p><strong>Weather on Home</strong></p>
+<p>If you turn on Weather on Home and allow location access, Nitevia sends your approximate location (rounded to about one kilometre) to Apple Weather (WeatherKit) to show the current weather, sunrise and sunset. It asks at most once every 30 minutes while you use the app, never during a recording and never in the background. Neither your location nor the weather is stored on your device or included in usage data. You can turn it off in Nitevia's settings, or remove location access in iOS Settings, at any time.</p>
 <p><strong>Update check</strong></p>
 <p>When the app starts, it asks our server (<code>nitevia.iocar.app</code>) whether a newer version of Nitevia is required. The request contains nothing about you or your sleep: no account, no identifier, no recordings. Like any web request, the server sees your IP address and the app's standard user agent (the app's name and build number, and your iOS version). These appear in the server's request logs, which are kept for up to 30 days and used only to answer the check and keep the server running. They are not used for tracking or advertising.</p>
 <p><strong>Subscriptions</strong></p>
